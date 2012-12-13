@@ -5,12 +5,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: design, responsive, preview, browser, width, adaptive
 Requires at least: 3.1
 Tested up to: 3.4
+Stable tag: trunk
 
 Preview your site at random page widths to test your Responsive design.
 
 == Description ==
 
-=Preview your site at random page widths to test your Responsive design.
+=Preview your site at random page widths to test your Responsive design.=
 
 WP Responsive Preview provides an additional previewing option when editing pages, post and other content types. It loads the preview within a randomly sized iframe to see how the design responds at a random width. It's great for testing how your responsive design performs.
 
