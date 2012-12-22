@@ -1,38 +1,32 @@
-=== WordPress Responsive Preview ===
+=== WP Butler ===
 Contributors: jordesign
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: design, responsive, preview, browser, width, adaptive
+Tags: admin, actions, butler, autocomplete, automate
 Requires at least: 3.1
 Tested up to: 3.4
 Stable tag: trunk
 
-Preview your site at random page widths to test your Responsive design.
+Provides an Text Field in the WP Admin allowing you to jump to common WP Actions.
 
 == Description ==
 
-=Preview your site at random page widths to test your Responsive design.=
+=Streamline the way you use the Wordpress Admin=
 
-WP Responsive Preview provides an additional previewing option when editing pages, post and other content types. It loads the preview within a randomly sized iframe to see how the design responds at a random width. It's great for testing how your responsive design performs.
-
-This plugin is based entirley on [ish. from Brad Frost][http://bradfrostweb.com/demo/ish/] - a great standalone tool for previewing your site at random widths. His post does the best job of explaining the reasoning behind ish. (and therefore WP Responsive Preview).
-
-"The real reasons for this tool is to educate and to facilitate a mental shift. Many clients, designers and developers get hung up on specific device widths, which is why this tool doesn’t include any such language, device chrome or anything like that. Ish. helps keep everyone focused on making a design that looks and functions great at any resolution."
+WP Butler adds a simple text field to your Wordpress Admin, that puts everthing at your fingertips. Simply start typing the action you wish to perform, and it will show you all the possible options. You're always a single click away.
 
 
 
 
 == Installation ==
 
-1. Upload the 'wp-responsive-preview' folder to the '/wp-content/plugins/' directory
-1. Activate the WP Responsive Preview plugin through the 'Plugins' menu in WordPress
-1. Start Previewing!
+1. Upload the 'wp-butler' folder to the '/wp-content/plugins/' directory
+1. Activate the WP Butler plugin through the 'Plugins' menu in WordPress
+1. Add the WP Butler widget to your dashboard.
+1. Work Smarter and Faster
 
 == Frequently Asked Questions ==
 
-= Why can't I preview at a set size? =
-
-Targeting specific widths is fraught with danger. The number of new devices being released month by month means that there are no longer 'safe' screen widths to target. WP Responsive Preview (and ish. - on which it is based) deliberately randomise the screen width in order to see what the design looks like at the 'in-between' stages.
 
 
 == Changelog ==
