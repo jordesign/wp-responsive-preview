@@ -10,9 +10,10 @@ Preview your site at random page widths to test your Responsive design.
 
 == Description ==
 
-=Preview your site at random page widths to test your Responsive design.
+=Preview your site at random page widths to test your Responsive design.=
 
-WP Responsive Preview provides an additional previewing option when editing pages, post and other content types. It loads the preview within a randomly sized iframe to see how the design responds at a random width. It's great for testing how your responsive design performs.
+WP Responsive Preview provides an additional previewing options for your site. Loading a Responsive Preview will load the page in a flexible framework at a random width, helping you see how your page looks at different widths. It also lets you re-randomise the width quickly, to test multiple widths.
+
 
 This plugin is based entirley on [ish. from Brad Frost][http://bradfrostweb.com/demo/ish/] - a great standalone tool for previewing your site at random widths. His post does the best job of explaining the reasoning behind ish. (and therefore WP Responsive Preview).
 
@@ -35,6 +36,11 @@ Targeting specific widths is fraught with danger. The number of new devices bein
 
 
 == Changelog ==
+
+= 1.1 =
+* Added a 'Responsive Preview' link to the Admin Bar.
+
+* Tidied up a little code behind the scenes
 
 = 1.0 =
 

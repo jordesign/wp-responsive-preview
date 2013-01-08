@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WP-Reponsive-Wordpress
- * @version 1.0
+ * @version 1.1
  */
 /*
 	/*
@@ -9,25 +9,10 @@
 	Plugin URI: http://www.jordesign.com/wp-responsive-preview
 	Description: Preview your site at random page widths to test your Responsive design.
 	Author: Jordan Gillman
-	Version: 1.0
+	Version: 1.1
 	Author URI: http://www.jordesign.com
 	*/
 	
-
-
-// And now update the link
-// function eg_customer_preview_link( $preview_post_link ) {
-    // $responsive_preview_slug = plugins_url()."/wp-responsive-preview/";
-	// if ( current_user_can( 'edit_pages' ) ) {
-		// $preview_post_link = add_query_arg( 'url', urlencode( $preview_post_link ), $responsive_preview_slug );
-	// }
-
-	// return $preview_post_link;
-// }
-// add_filter( 'preview_post_link', 'eg_customer_preview_link', 10, 1 );
-// add_filter( 'preview_page_link', 'eg_customer_preview_link', 10, 1 );
-
-
 /* Fire our meta box setup function on the post editor screen. */
 add_action( 'load-post.php', 'responsive_preview_meta_boxes_setup' );
 add_action( 'load-post-new.php', 'responsive_preview_meta_boxes_setup' );
@@ -79,4 +64,26 @@ function responsive_preview_class_meta_box( $post ) {
 	<a class="button responsive-preview" href="<?php echo $preview_link; ?>" target="wp-preview" id="responsive-post-preview"><?php echo $preview_button; ?></a>
 	</div>
 <?php }
+
+/* Add link to Admin Bar */
+function jg_responsive_admin_bar_render() {
+	global $wp_admin_bar;
+	
+	// get the current page url
+	$url  = @( $_SERVER["HTTPS"] != 'on' ) ? 'http://'.$_SERVER["SERVER_NAME"] :  'https://'.$_SERVER["SERVER_NAME"];
+	  $url .= ( $_SERVER["SERVER_PORT"] !== 80 ) ? ":".$_SERVER["SERVER_PORT"] : "";
+	  $url .= $_SERVER["REQUEST_URI"];
+	
+	// construct preview url
+	$jg_responsive_link = plugins_url()."/wp-responsive-preview/?url=".$url;
+	
+	//add menu item
+	$wp_admin_bar->add_menu( array(
+		'id' => 'responsive_preview', // link ID
+		'title' => __('Check Responsive Preview'), // link title
+		'href' => $jg_responsive_link, // link to the preview url
+		'meta' => array( 'class' => 'responsiveLink', 'target' => '_blank', 'title' => 'Check this page at a random width')  
+	));
+}
+add_action( 'wp_before_admin_bar_render', 'jg_responsive_admin_bar_render' );
 
